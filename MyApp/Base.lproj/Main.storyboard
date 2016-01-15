@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,55 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Star Wars" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-t5-yzr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star Wars" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-t5-yzr">
                                 <rect key="frame" x="157" y="285" width="454" height="335"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x05-Nw-JVC">
-                                <rect key="frame" x="157" y="179" width="195" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x05-Nw-JVC">
+                                <rect key="frame" x="157" y="179" width="195" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="The Light Side">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNp-bV-NXR"/>
                                     <segue destination="Mwn-XO-2kW" kind="show" identifier="lightSideViewController" id="o5T-tI-MS4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUs-2T-cse">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUs-2T-cse">
                                 <rect key="frame" x="388" y="179" width="265" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="The Dark Side">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="onButtonTappedTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMy-cV-UwL"/>
                                     <segue destination="9M8-Oa-7yg" kind="show" identifier="darkSideViewController" id="IoD-af-JYm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose Your Destiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-8q-kQ3">
-                                <rect key="frame" x="199" y="105" width="454" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Your Destiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-8q-kQ3">
+                                <rect key="frame" x="194" y="105" width="454" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Jz0-8q-kQ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="206" id="14c-Bd-XEL"/>
-                            <constraint firstItem="fiu-t5-yzr" firstAttribute="top" secondItem="x05-Nw-JVC" secondAttribute="bottom" constant="76" id="6Em-c7-vsK"/>
-                            <constraint firstItem="mUs-2T-cse" firstAttribute="top" secondItem="Jz0-8q-kQ3" secondAttribute="bottom" constant="48" id="6Ly-IZ-37m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jz0-8q-kQ3" secondAttribute="trailing" constant="194" id="71h-kL-JJR"/>
-                            <constraint firstItem="mUs-2T-cse" firstAttribute="top" secondItem="Jz0-8q-kQ3" secondAttribute="bottom" constant="48" id="8KN-7Y-AiB"/>
-                            <constraint firstItem="fiu-t5-yzr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="9iJ-C8-uVg"/>
-                            <constraint firstItem="x05-Nw-JVC" firstAttribute="top" secondItem="Jz0-8q-kQ3" secondAttribute="bottom" constant="48" id="DUj-SY-uuo"/>
-                            <constraint firstItem="Jz0-8q-kQ3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="KuZ-Ey-WBU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mUs-2T-cse" secondAttribute="trailing" constant="125" id="Lvx-gp-V2O"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fiu-t5-yzr" secondAttribute="bottom" constant="94" id="Pvd-sr-kR2"/>
-                            <constraint firstItem="fiu-t5-yzr" firstAttribute="top" secondItem="mUs-2T-cse" secondAttribute="bottom" constant="76" id="T4M-Mj-Vwi"/>
-                            <constraint firstItem="mUs-2T-cse" firstAttribute="leading" secondItem="x05-Nw-JVC" secondAttribute="trailing" constant="102" id="TG2-aE-23N"/>
-                            <constraint firstItem="mUs-2T-cse" firstAttribute="leading" secondItem="x05-Nw-JVC" secondAttribute="trailing" constant="102" id="XQP-0v-C3p"/>
-                            <constraint firstItem="fiu-t5-yzr" firstAttribute="top" secondItem="mUs-2T-cse" secondAttribute="bottom" constant="76" id="e4M-dD-up5"/>
-                            <constraint firstItem="x05-Nw-JVC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="im1-Js-1na"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fiu-t5-yzr" secondAttribute="trailing" constant="137" id="jPv-MP-O9X"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="1bO-2i-Tu4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -93,17 +76,57 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your Jedi Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-QR-sCN">
                                 <rect key="frame" x="302" y="192" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-GP-ZRF">
                                 <rect key="frame" x="263" y="233" width="243" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Mwn-XO-2kW" id="UsV-ma-djt"/>
+                                    <segue destination="RNe-ba-8dJ" kind="show" identifier="jediSegue" id="pXF-bo-p6h"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Light Side of the Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2F-6z-x6V">
                                 <rect key="frame" x="128" y="100" width="513" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="jediTextField" destination="H7v-GP-ZRF" id="gD5-XB-uxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdN-Fd-59P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="1517"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="NFt-KJ-TVk">
+            <objects>
+                <viewController id="RNe-ba-8dJ" customClass="ThirdViewController" customModule="MyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQc-u9-IjC"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3H-2Y-CEF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ca-ga-pSM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-SD-kyh">
+                                <rect key="frame" x="318" y="167" width="133" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6N-cB-fq3">
+                                <rect key="frame" x="318" y="172" width="133" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -112,9 +135,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gdN-Fd-59P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGv-pK-taY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="1517"/>
+            <point key="canvasLocation" x="2029" y="1517"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6LY-81-HoX">
@@ -134,13 +157,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Dark Side of the Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-1g-3Qy">
                                 <rect key="frame" x="114" y="92" width="541" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Sith Lord Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-gR-5Pf">
                                 <rect key="frame" x="283" y="169" width="202" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7m3-bZ-fQZ">
@@ -149,7 +172,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wB7-Io-NPd" userLabel="First Responder" sceneMemberID="firstResponder"/>

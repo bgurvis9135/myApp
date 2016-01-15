@@ -8,9 +8,22 @@
 
 import UIKit
 
+class SecondViewController: UIViewController, UITextFieldDelegate  {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+}
+    var starWars = sides()
+    @IBOutlet weak var jediTextField: UITextField!
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        <#code#>
+    }
+    }
+
+
 
     
-
 
 
 
