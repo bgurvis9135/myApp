@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var sithTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -37,7 +39,36 @@ class ViewController: UIViewController {
         alertTwo.addAction(buttonTwo)
         presentViewController(alertTwo, animated: true, completion: nil)
         
+        
+        
+        
     }
+    
+    var starWars = sides()
+    
+    
+    
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        starWars.jedi = sithTextField.text!
+        
+        
+        performSegueWithIdentifier("sithSegue", sender: nil)
+        return true
+        
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let next = segue.destinationViewController as! FourthViewController
+        next.starWars = starWars
+
+    
+    
+    
+    
+    
     
     
 }

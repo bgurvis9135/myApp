@@ -85,7 +85,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Mwn-XO-2kW" id="UsV-ma-djt"/>
-                                    <segue destination="RNe-ba-8dJ" kind="show" identifier="jediSegue" id="pXF-bo-p6h"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Light Side of the Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2F-6z-x6V">
@@ -100,6 +99,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="jediTextField" destination="H7v-GP-ZRF" id="gD5-XB-uxU"/>
+                        <segue destination="RNe-ba-8dJ" kind="show" identifier="jediSegue" id="kKy-bJ-0Vo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdN-Fd-59P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,10 +130,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpq-EZ-nyn">
+                                <rect key="frame" x="82" y="82" width="605" height="126"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="myLabel" destination="Tpq-EZ-nyn" id="vif-S4-LVB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGv-pK-taY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,7 +151,7 @@
         <!--View Controller-->
         <scene sceneID="6LY-81-HoX">
             <objects>
-                <viewController id="9M8-Oa-7yg" sceneMemberID="viewController">
+                <viewController id="9M8-Oa-7yg" customClass="ViewController" customModule="MyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCv-1a-s4l"/>
                         <viewControllerLayoutGuide type="bottom" id="jvI-xz-a2r"/>
@@ -174,10 +183,41 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="sithTextField" destination="7m3-bZ-fQZ" id="KhZ-gx-OOZ"/>
+                        <segue destination="4lQ-ol-jap" kind="show" identifier="sithSegue" id="2OS-k3-z86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wB7-Io-NPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2029" y="349"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="o4E-pr-SgH">
+            <objects>
+                <viewController id="4lQ-ol-jap" customClass="FourthViewController" customModule="MyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vO9-ED-u30"/>
+                        <viewControllerLayoutGuide type="bottom" id="efd-eb-zCX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ooF-9z-kXB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-Wy-3W1">
+                                <rect key="frame" x="101" y="119" width="567" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reu-gi-GX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IFI-aa-RZO">

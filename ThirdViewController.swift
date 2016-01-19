@@ -9,5 +9,14 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    @IBOutlet weak var myLabel: UILabel!
+    var starWars = sides()
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            myLabel.text = "Welcome \(starWars.jedi), you will be our new Jedi Commander "
+
+        }
 
 }
